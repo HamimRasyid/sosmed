@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #eee;
+
+  font-optical-sizing: auto;
+  position: relative;
+  background-image: url(img/logo-mobile-legend.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* card */
+.section-card {
+  /* display: grid; */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 48px;
+  width: 80%;
+  margin: 60px auto;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.card_img {
+  width: 100%;
+  display: block;
+}
+
+.card_details {
+  padding: 10px 0;
+}
+
+.card_details ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  padding: 20px 0;
+}
+
+.card_details ul li {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 0;
+}
+
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid #bbb;
+}
+
+/*btn*/
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 100px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+}
+
+.card-1 .btn {
+  background-color: red;
+}
+
+.card-2 .btn {
+  background-color: green;
+}
+
+.card-3 .btn {
+  background-color: blue;
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup_content {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.25);
+  opacity: 0;
+  transition: all 0.5s 0.1s;
+}
+
+.popup_img {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup_img img {
+  display: block;
+  width: 33.333%;
+}
+
+.popup_header {
+  text-align: center;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 36px;
+}
+
+.popup_header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.popup_header h2 {
+  font-size: 20px;
+}
+
+.popup_teks {
+  padding: 0 36px;
+  line-height: 1.4;
+}
+
+.popup_teks p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.popup_btn {
+  background-color: #333;
+  margin-bottom: 36px;
+}
+
+#popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup:target .popup_content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup_close:link,
+.popup_close:visited {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.3s;
+}
+
+.popup_close:hover,
+.popup_close:active {
+  color: #555;
+}
