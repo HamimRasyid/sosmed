@@ -17,7 +17,7 @@ body {
 
 /* card */
 .section-card {
-  /* display: grid; */
+  /*display: grid; */
   grid-template-columns: repeat(3, 1fr);
   column-gap: 48px;
   width: 80%;
@@ -74,15 +74,15 @@ body {
 }
 
 .card-1 .btn {
-  background-color: red;
-}
-
-.card-2 .btn {
   background-color: green;
 }
 
-.card-3 .btn {
+.card-2 .btn {
   background-color: blue;
+}
+
+.card-3 .btn {
+  background-color: red;
 }
 
 .popup {
